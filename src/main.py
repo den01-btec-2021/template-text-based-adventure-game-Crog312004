@@ -16,22 +16,22 @@ def main():
     print("you enter the first room")
     puzzle_guess_north = input("What shape has no pointy ends: triangle, square or circle. ")
     if puzzle_guess_north == "circle":
-       print("Correct")
+        print("Correct")
+        prize = "Spellbook 1"
+        print (f"You have acquired {prize}")
+        backpack.append(prize)
+        
+        content_show= input("Do you want to see the contents? ")
+        if content_show == "yes":
+            for prize in backpack:
+                print(f"Your backpack contains {prize}")
+        else:
+            print("You chose to not open your backpack")
     else:
        print("Incorrect")
        lives -= 1
 
-    if correct: 
-       prize = "Spellbook 1"
-       print (f"You have acquired {prize}")
-       backpack.append("prize")
-    for prize in backpack:
-       print("Your backpack contains {prize}")
-       content_show= input("Do you want to see the contents? ")
-    if content_show == "yes":
-      
-    else:
-     print("You chose to not open your backpack")
+    
 
    elif direction == "south":
      print("you went south")
